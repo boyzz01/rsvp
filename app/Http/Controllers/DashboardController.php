@@ -4,15 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DashboardController extends Controller
 {
     //
-    public function index()
+    public function index($id)
     {
-        $data = DB::table("rajwa_dedi")->get();
-        $hadir = DB::table("rajwa_dedi")->where('kehadiran', 'Ya')->get();
-        $tidak =  DB::table("rajwa_dedi")->where('kehadiran', 'Tidak')->get();
+
+        $user = DB::table("user")->where('data', $id)->first();
+
+        if ($user == null) {
+            abort(404);
+        }
+
+        $data = DB::table($user->nama)->get();
+        $hadir = DB::table($user->nama)->where('kehadiran', 'Ya')->get();
+        $tidak =  DB::table($user->nama)->where('kehadiran', 'Tidak')->get();
         return view(
             'dashboard',
             [
@@ -21,5 +29,12 @@ class DashboardController extends Controller
                 'tidak' => $tidak
             ]
         );
+    }
+
+
+    public function randomid()
+    {
+        $uid = Str::random(32);
+        echo $uid;
     }
 }
