@@ -6,7 +6,7 @@
 
     <div class="row ">
 
-        <div class="col-lg-4 col-6">
+        <div class="col-lg-3 col-6">
             <div class=" card card-stats mb-4 mb-xl-0">
                 <div class="card-body  bg-primary">
                     <div class="row">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-6">
+        <div class="col-lg-3 col-6">
             <div class=" card card-stats mb-4 mb-xl-0">
                 <div class="card-body  bg-success">
                     <div class="row">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-6">
+        <div class="col-lg-3 col-6">
             <div class=" card card-stats mb-4 mb-xl-0">
                 <div class="card-body  bg-warning">
                     <div class="row">
@@ -48,6 +48,21 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-6">
+            <div class=" card card-stats mb-4 mb-xl-0">
+                <div class="card-body  bg-success">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase  mb-0">Total Tamu</h5>
+                            <span class="h2 font-weight-bold mb-0" style="color: white;">{{ $total }}</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
 
 
     </div>
@@ -157,7 +172,7 @@
                                 <th>Nama</th>
                                 <th>Wish</th>
                                 <th>Kehadiran</th>
-
+                                <th>Jumlah Tamu</th>
 
                                 <th>Aksi</th>
 
@@ -176,6 +191,7 @@
                                 <td>{{ $d->nama_comment }}</td>
                                 <td>{{ $d->isi_comment }}</td>
                                 <td>{{ $d->kehadiran}}</td>
+                                <td>{{ $d->jumlah}}</td>
 
                                 <td nowrap="nowrap">
 

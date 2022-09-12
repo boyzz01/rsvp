@@ -21,12 +21,14 @@ class DashboardController extends Controller
         $data = DB::table($user->nama)->get();
         $hadir = DB::table($user->nama)->where('kehadiran', 'Ya')->get();
         $tidak =  DB::table($user->nama)->where('kehadiran', 'Tidak')->get();
+        $total = DB::table($user->nama)->sum('jumlah');
         return view(
             'dashboard',
             [
                 'data' => $data,
                 'hadir' => $hadir,
-                'tidak' => $tidak
+                'tidak' => $tidak,
+                'total' => $total
             ]
         );
     }

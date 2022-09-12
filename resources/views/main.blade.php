@@ -138,7 +138,7 @@
 
                             <li class="menu-item {{ request()->routeIs('generator') ? 'menu-item-active' : '' }}"
                                 aria-haspopup="true">
-                                <a href="{{ url('/') }}" class="menu-link">
+                                <a href="https://theday.id/url/" class="menu-link">
                                     <span class="svg-icon menu-icon">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg"
