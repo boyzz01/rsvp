@@ -138,7 +138,7 @@
 
                             <li class="menu-item {{ request()->routeIs('generator') ? 'menu-item-active' : '' }}"
                                 aria-haspopup="true">
-                                <a href="https://theday.id/url/" class="menu-link">
+                                <a href="https://theday.id/url/?nama={{ $user->slug }}" class="menu-link">
                                     <span class="svg-icon menu-icon">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +219,8 @@
                         <div
                             class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
                             <div class="d-flex align-items-center flex-wrap mr-2">
-                                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">RSVP Dashboard</h5>
+                                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">RSVP Dashboard {{ $user->pasangan
+                                    }}</h5>
                             </div>
 
                         </div>

@@ -25,6 +25,7 @@ class DashboardController extends Controller
         return view(
             'dashboard',
             [
+                'user' => $user,
                 'data' => $data,
                 'hadir' => $hadir,
                 'tidak' => $tidak,
