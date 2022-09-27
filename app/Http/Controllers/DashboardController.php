@@ -35,6 +35,13 @@ class DashboardController extends Controller
     }
 
 
+    public function delete($user, $id)
+    {
+
+        DB::table($user->nama)->where('id_comment', $id)->first()->delete();
+        return redirect()->back()->with('success', 'Data berhasil dihapus');
+    }
+
     public function randomid()
     {
         $uid = Str::random(32);

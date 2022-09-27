@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/{uid}', [DashboardController::class, 'index'])->name('home');
+Route::delete('/delete/{user}/{id}', [DashboardController::class, 'delete'])->name('delete');
 
 Route::get('/random', [DashboardController::class, 'randomid']);

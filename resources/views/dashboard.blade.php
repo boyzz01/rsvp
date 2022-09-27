@@ -194,16 +194,15 @@
                                 <td>{{ $d->jumlah}}</td>
 
                                 <td nowrap="nowrap">
+                                    <form action="{{ route('delete',$user,$d->idd) }}" method="POST">
 
+                                        <button type="submit" class="btn btn-sm btn-danger btn-icon" title="Delete"
+                                            onclick="return confirm('Are you sure want to delete this data?')"><i
+                                                class="la la-trash">
+                                            </i>
+                                        </button>
 
-
-
-                                    <button type="submit" class="btn btn-sm btn-danger btn-icon" title="Delete"
-                                        onclick="return confirm('Are you sure want to delete this data?')"><i
-                                            class="la la-trash">
-                                        </i>
-                                    </button>
-
+                                    </form>
                                 </td>
 
 
